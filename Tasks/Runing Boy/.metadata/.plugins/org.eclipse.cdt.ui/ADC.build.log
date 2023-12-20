@@ -1,0 +1,40 @@
+16:33:22 **** Incremental Build of configuration Debug for project ADC ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC.map -mmcu=atmega32 -o "ADC.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC.elf  >"ADC.lss"
+Finished building: ADC.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC.elf  "ADC.hex"
+Finished building: ADC.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   29224 bytes (89.2% Full)
+(.text + .data + .bootloader)
+
+Data:        330 bytes (16.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:33:23 Build Finished. 0 errors, 1 warnings. (took 973ms)
+

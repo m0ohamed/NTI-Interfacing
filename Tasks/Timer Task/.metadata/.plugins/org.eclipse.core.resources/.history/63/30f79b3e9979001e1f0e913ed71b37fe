@@ -1,0 +1,119 @@
+#include "../MCAL/Port/Includes/Port.h"
+#include "../MCAL/Dio/Includes/Dio.h"
+#include "../MCAL/GIE/Includes/GIE.h"
+#include "../MCAL/Timers/Includes/Timer.h"
+#include "../HAL/LCD/Includes/LCD.h"
+#include "../HAL/KeyPad/Includes/Keypad.h"
+#include "util/delay.h"
+uint8 Sec1=0,Sec2=0,Min1=0,Min2=0,H1=0,H2=0;
+uint8 Flag=0,key=0,Alarm;
+
+void Watch(void)
+{
+	Sec1++;
+	if(Sec1==10)
+	{
+		Sec1=0;
+		Sec2++;
+	}
+	if(Sec2==6)
+	{
+		Min1++;
+		Sec2=0;
+	}
+	if(Min1==10)
+	{
+		Min1=0;
+		Min2++;
+	}
+	if(Min2==6)
+	{
+		H1++;
+		Min2=0;
+	}
+	if(H1==10)
+	{
+		H2++;
+		H1=0;
+	}
+	Lcd_VidDisplayNumberXY(1,0,H2);
+	Lcd_VidDisplayNumberXY(1,1,H1);
+	Lcd_VidDisplayNumberXY(1,4,Min2);
+	Lcd_VidDisplayNumberXY(1,5,Min1);
+	Lcd_VidDisplayNumberXY(1,8,Sec2);
+	Lcd_VidDisplayNumberXY(1,9,Sec1);
+
+}
+
+void Alarm_Func(void)
+{
+	LCD_DisplayStringXY(0,0,"ALARM:            ");
+
+
+	Alarm--;
+	Lcd_VidDisplayNumberXY(1,5,Alarm);
+	if(Alarm==0)
+	{
+		Timer_DeInit(Timer1);
+
+	}
+}
+
+int main(void)
+{
+	PORT_Init();
+	GIE_enuInit();
+	Lcd_Init();
+	Timer_Config Config={0,8000,Timer1,CTC,Disconnect};
+
+	while(1)
+	{
+		if(Flag==0)
+		{
+			LCD_DisplayStringXY(0,0,"enter Your Choice:");
+			LCD_DisplayStringXY(1,0,"1.Watch               ");
+			LCD_DisplayStringXY(2,0,"2.Alarm               ");
+			Flag=1;
+		}
+		Keypad_enuKeypadGetPressed(&key);
+
+		switch(key)
+		{
+		case '1':
+
+			LCD_vidClrDisplay();
+			LCD_DisplayStringXY(0,0,"HH::MM::SS");
+			Timer_enuTimer_Init(&Config);
+			Timer1_CallBack(Watch);
+			Timer_Start();
+			break;
+		case '2':
+			LCD_vidClrDisplay();
+			LCD_DisplayStringXY(0,0,"Enter Sec:           ");
+			while(key == '0'){
+				Keypad_enuKeypadGetPressed(&key);
+			}
+			Alarm=key- '0';
+			Lcd_VidDisplayNumberXY(0,10,Alarm);
+			Timer_enuTimer_Init(&Config);
+			Timer1_CallBack(Alarm_Func);
+			Timer_Start();
+
+
+
+			break;
+		case '#':
+			Flag=0;
+			H2=0;
+			H1=0;
+			Min2=0;
+			Min1=0;
+			Sec2=0;
+			Sec1=0;
+			Timer_DeInit(Timer1);
+			break;
+		}
+	}
+}
+
+

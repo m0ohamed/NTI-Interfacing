@@ -1,0 +1,21 @@
+#include "../MCAL/Port/Includes/Port.h"
+#include "../MCAL/Dio/Includes/Dio.h"
+#include "../HAL/LCD/Includes/LCD.h"
+#include "../HAL/KeyPad/Includes/Keypad.h"
+#include "util/delay.h"
+
+
+int main(void)
+{
+	PORT_Init();
+	Lcd_Init();
+	Timer_Config Config={0,10000,Timer1,CTC,Disconnect};
+	Timer_enuTimer_Init(&Config);
+
+	while(1)
+	{
+
+
+	}
+}
+

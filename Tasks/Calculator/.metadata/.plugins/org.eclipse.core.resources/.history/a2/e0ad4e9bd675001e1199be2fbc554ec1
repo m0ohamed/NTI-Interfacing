@@ -1,0 +1,11 @@
+#ifndef KEYPAD_PRV_H
+#define KEYPAD_PRV_H
+
+
+
+ void Keypad_VidWritePins(uint8 LOC_u8Pattern);
+ void Keypad_VidReadPins(pu8 Add_LOC_u8PinsReading);
+
+
+
+#endif

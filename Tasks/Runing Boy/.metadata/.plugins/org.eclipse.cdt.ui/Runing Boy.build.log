@@ -1,0 +1,46 @@
+14:53:52 **** Incremental Build of configuration Release for project Runing Boy ****
+make all 
+Building file: ../MCAL/Port/Srcs/Port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/Port/Srcs/Port.d" -MT"MCAL/Port/Srcs/Port.o" -c -o "MCAL/Port/Srcs/Port.o" "../MCAL/Port/Srcs/Port.c"
+Finished building: ../MCAL/Port/Srcs/Port.c
+ 
+Building file: ../MCAL/GIE/Srcs/GIE.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/GIE/Srcs/GIE.d" -MT"MCAL/GIE/Srcs/GIE.o" -c -o "MCAL/GIE/Srcs/GIE.o" "../MCAL/GIE/Srcs/GIE.c"
+Finished building: ../MCAL/GIE/Srcs/GIE.c
+ 
+Building file: ../MCAL/EXTI/Srcs/EXTI.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/EXTI/Srcs/EXTI.d" -MT"MCAL/EXTI/Srcs/EXTI.o" -c -o "MCAL/EXTI/Srcs/EXTI.o" "../MCAL/EXTI/Srcs/EXTI.c"
+Finished building: ../MCAL/EXTI/Srcs/EXTI.c
+ 
+Building file: ../MCAL/EXTI/Srcs/EXTI_IRQs.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/EXTI/Srcs/EXTI_IRQs.d" -MT"MCAL/EXTI/Srcs/EXTI_IRQs.o" -c -o "MCAL/EXTI/Srcs/EXTI_IRQs.o" "../MCAL/EXTI/Srcs/EXTI_IRQs.c"
+Finished building: ../MCAL/EXTI/Srcs/EXTI_IRQs.c
+ 
+Building file: ../MCAL/Dio/Srcs/Dio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/Dio/Srcs/Dio.d" -MT"MCAL/Dio/Srcs/Dio.o" -c -o "MCAL/Dio/Srcs/Dio.o" "../MCAL/Dio/Srcs/Dio.c"
+Finished building: ../MCAL/Dio/Srcs/Dio.c
+ 
+Building file: ../HAL/LCD/Srcs/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/LCD/Srcs/LCD.d" -MT"HAL/LCD/Srcs/LCD.o" -c -o "HAL/LCD/Srcs/LCD.o" "../HAL/LCD/Srcs/LCD.c"
+Finished building: ../HAL/LCD/Srcs/LCD.c
+ 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: Runing Boy.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Runing Boy.map -mmcu=atmega32 -o "Runing Boy.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+avr-gcc.exe: Boy.map: No such file or directory
+make: *** [Runing Boy.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+14:53:54 Build Failed. 1 errors, 0 warnings. (took 1s.808ms)
+

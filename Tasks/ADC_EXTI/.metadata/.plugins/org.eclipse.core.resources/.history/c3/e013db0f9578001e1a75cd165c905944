@@ -1,0 +1,49 @@
+#include "../MCAL/Port/Includes/Port.h"
+#include "../MCAL/ADC/Includes/ADC.h"
+#include "../HAL/LCD/Includes/LCD.h"
+#include "../MCAL/GIE/Includes/GIE.h"
+#include "../MCAL/EXTI/Includes/EXTI.h"
+
+uint32 Value_mv=0;
+void ADC_CallFunc(uint16 Val)
+{
+	Value_mv=(double64)Val;
+
+}
+void EXTI_Func1(void);
+void EXTI_Func2(void);
+
+int main(void)
+{
+	PORT_Init();
+	GIE_enuInit();
+	EXTI_Init();
+	Lcd_Init();
+	ADC_ConfigType Config={AREF,ADC0,Prescaler_64};
+	ADC_Init(&Config);
+	ADC_CallBack(ADC_CallFunc);
+	EXTI_CallBack(EXTI_Func1,EXTI_INT0_IRQ);
+	LCD_DisplayStringXY(0,0,"Volume = ");
+
+	while(1)
+	{
+		ADC_enuReadChannel(ADC0);
+		Lcd_VidDisplayNumberXY(0,9,Value_mv);
+	}
+}
+
+
+void EXTI_Func1(void)
+{
+	Value_mv = Value_mv * 100;
+	EXTI_CallBack(EXTI_Func2,EXTI_INT0_IRQ);
+	LCD_DisplayStringXY(2,15,"mv");
+
+}
+void EXTI_Func2(void)
+{
+	Value_mv =Value_mv /100 ;
+	EXTI_CallBack(EXTI_Func1,EXTI_INT0_IRQ);
+	LCD_DisplayStringXY(2,15,"v ");
+
+}

@@ -1,0 +1,12 @@
+#ifndef EXTI_CFG_H
+#define EXTI_CFG_H
+
+#include "EXTI.h"
+
+#define EXTI_INT0_MODE       EXTI_INT0_ENABLE_WITH_FALLING_EDGE
+#define EXTI_INT1_MODE       EXTI_INT0_DISABLE
+#define EXTI_INT2_MODE       EXTI_INT0_DISABLE
+
+
+
+#endif

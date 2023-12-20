@@ -1,0 +1,62 @@
+/*********************************************************************************************
+ * Name                 : Port_Cfg.h
+ * Description          : Port configuration
+ * Author               : Mohamed khaled
+ * *******************************************************************************************/
+//Guard start
+#ifndef PORT_CFG_H
+#define PORT_CFG_H
+
+
+
+/*********************************************************************************************/
+							//Pins Configurations//
+							//Pins from Pin0 to Pin31//
+//You Can Configure Pin as :
+/*1.PORT_OUTPUT_HIGH         2.PORT_OUTPUT_LOW       3.PORT_INPUT_FLOATING        4.PORT_INPUT_PULLUP*/
+//Hint : USE Port.h FILE
+/********************************************************************************************/
+#define PORT_PIN0_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN1_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN2_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN3_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN4_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN5_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN6_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN7_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN8_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN9_CONFIG            PORT_OUTPUT_LOW
+#define PORT_PIN10_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN11_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN12_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN13_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN14_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN15_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN16_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN17_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN18_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN19_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN20_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN21_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN22_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN23_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN24_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN25_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN26_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN27_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN28_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN29_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN30_CONFIG           PORT_OUTPUT_LOW
+#define PORT_PIN31_CONFIG           PORT_OUTPUT_LOW
+
+
+/*********************************************************************************************/
+							//Number of Ports and Pins in the Target//
+/********************************************************************************************/
+#define PORT_NUMBER_OF_PINS           32
+#define PORT_NUMBER_OF_PORTS          4
+
+
+
+//guard end
+#endif

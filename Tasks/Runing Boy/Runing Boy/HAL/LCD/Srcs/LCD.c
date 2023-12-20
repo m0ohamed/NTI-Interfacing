@@ -1,0 +1,287 @@
+#include "../Includes/LCD.h"
+
+#include "util/delay.h"
+#include "../../../MCAL/Dio/Includes/Dio.h"
+#include "../../../MCAL/Port/Includes/Port.h"
+#include "../../../Services/Lib/common_macros.h"
+#include "../../../Services/Lib/Platform.h"
+#include "../../../Services/Lib/std_types.h"
+#include "../Includes/LCD_Cfg.h"
+#include "../Includes/LCD_Prv.h"
+
+
+void Lcd_Init(void)
+{
+	//	_delay_ms(50);
+
+
+#if(LCD_DATA_MODE==LCD_FOUR_BIT_MODE)
+	Lcd_VidSendCommand(LCD_4_BIT_2_LINES_INIT1_COMMAND);
+	Lcd_VidSendCommand(LCD_4_BIT_2_LINES_INIT2_COMMAND);
+	Lcd_VidSendCommand(LCD_4_BIT_MODE_SELECTION);
+
+
+#elif(LCD_DATA_MODE==LCD_EIGHT_BIT_MODE)
+
+	Lcd_VidSendCommand(LCD_8_BIT_MODE_SELECTION);
+
+#endif
+	Lcd_VidSendCommand(LCD_CURSOR_OFF_COMMAND);
+	Lcd_VidSendCommand(LCD_CLEAR_SCREEN_COMMAND);
+
+}
+
+void Lcd_VidSendCommand(uint8 Copy_u8Command)
+{
+	Dio_enuWriteChannel(LCD_RS_PIN_NUM,DIO_LOGIC_LOW);
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+	_delay_ms(1);
+#if(LCD_DATA_MODE==LCD_FOUR_BIT_MODE)
+	Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,4));
+	Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,5));
+	Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,6));
+	Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,7));
+
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+	_delay_ms(1);
+
+	Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,0));
+	Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,1));
+	Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,2));
+	Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,3));
+
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+	_delay_ms(1);
+#elif(LCD_DATA_MODE==LCD_EIGHT_BIT_MODE)
+	Dio_enuWriteChannel(LCD_DATA_PIN0,GET_BIT(Copy_u8Command,0));
+	Dio_enuWriteChannel(LCD_DATA_PIN1,GET_BIT(Copy_u8Command,1));
+	Dio_enuWriteChannel(LCD_DATA_PIN2,GET_BIT(Copy_u8Command,2));
+	Dio_enuWriteChannel(LCD_DATA_PIN3,GET_BIT(Copy_u8Command,3));
+	Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,4));
+	Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,5));
+	Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,6));
+	Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,7));
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+	LCD_Delay(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+	LCD_Delay(2);
+#endif
+}
+
+void Lcd_VidDisplayChracter(uint8 Copy_u8Command)
+{
+	Dio_enuWriteChannel(LCD_RS_PIN_NUM,DIO_LOGIC_HIGH);
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+	_delay_ms(1);
+#if(LCD_DATA_MODE==LCD_FOUR_BIT_MODE)
+	Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,4));
+	Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,5));
+	Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,6));
+	Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,7));
+
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+	_delay_ms(1);
+
+
+	Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,0));
+	Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,1));
+	Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,2));
+	Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,3));
+
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+	_delay_ms(1);
+#elif(LCD_DATA_MODE==LCD_EIGHT_BIT_MODE)
+	Dio_enuWriteChannel(LCD_DATA_PIN0,GET_BIT(Copy_u8Command,0));
+	Dio_enuWriteChannel(LCD_DATA_PIN1,GET_BIT(Copy_u8Command,1));
+	Dio_enuWriteChannel(LCD_DATA_PIN2,GET_BIT(Copy_u8Command,2));
+	Dio_enuWriteChannel(LCD_DATA_PIN3,GET_BIT(Copy_u8Command,3));
+	Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,4));
+	Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,5));
+	Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,6));
+	Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,7));
+
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+	_delay_ms(1);
+	Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+	_delay_ms(2);
+#endif
+}
+
+
+
+void Lcd_VidCreateCustomCharacter(pu8 Add_Pu8CustomCharcter,uint8 Index)
+{
+	uint8 LOC_u8Iterator=0;
+	if(Index<8)
+	{
+		Lcd_VidSendCommand(0x40+(Index*8));
+		_delay_ms(1);
+		for(LOC_u8Iterator=0;LOC_u8Iterator<8;LOC_u8Iterator++)
+		{
+			Lcd_VidDisplayChracter(Add_Pu8CustomCharcter[LOC_u8Iterator]);
+		}
+		Lcd_VidSendCommand(LCD_SET_DDRAM_ADDR_CMD);
+
+
+
+	}
+}
+
+
+
+void Lcd_VidGoToXY(uint8 Copy_u8Row,uint8 Copy_u8Column)
+{if(Copy_u8Row == 0)
+{
+	Lcd_VidSendCommand(LCD_SET_DDRAM_ADDR_CMD + 0 + Copy_u8Column);
+}
+else if (Copy_u8Row == 1)
+	Lcd_VidSendCommand(LCD_SET_DDRAM_ADDR_CMD + 0x40 + Copy_u8Column);
+else if (Copy_u8Row == 2)
+	Lcd_VidSendCommand(LCD_SET_DDRAM_ADDR_CMD + 0x14 + Copy_u8Column);
+else if (Copy_u8Row == 3)
+	Lcd_VidSendCommand(LCD_SET_DDRAM_ADDR_CMD + 0x54 + Copy_u8Column);
+}
+
+
+void Lcd_VidDisplayString(const pu8 Add_pu8String )
+{
+	uint8 LOC_u8Iterator=0;
+	while(Add_pu8String[LOC_u8Iterator] != '\0')
+	{
+		Lcd_VidDisplayChracter(Add_pu8String[LOC_u8Iterator]);
+		LOC_u8Iterator++;
+	}
+}
+
+void Lcd_VidDisplayNumber(uint64 Copy_u64Num )
+{
+	uint64 LOC_u8Inverse=1;
+	if(Copy_u64Num==0)
+	{
+		Lcd_VidDisplayChracter('0');
+	}
+	while(Copy_u64Num != 0)
+	{
+		LOC_u8Inverse=(LOC_u8Inverse*10)+(Copy_u64Num%10);
+		Copy_u64Num /=10;
+	}
+	while(LOC_u8Inverse != 1)
+	{
+		Lcd_VidDisplayChracter(((LOC_u8Inverse%10)+'0'));
+		LOC_u8Inverse /=10;
+	}
+}
+
+void LCD_vidClrDisplay(void)
+{
+	Lcd_VidSendCommand(LCD_CLEAR_DISPLAY);
+	_delay_ms(4);
+	Lcd_VidSendCommand(LCD_CURSOR_HOME);
+	_delay_ms(4);
+
+}
+
+void LCD_DisplayStringXY(uint8 Copy_u8Row,uint8 Copy_u8Column,const char* Add_pu8String)
+{
+	Lcd_VidGoToXY(Copy_u8Row,Copy_u8Column);
+	uint8 LOC_u8Iterator=0;
+	while(Add_pu8String[LOC_u8Iterator] != '\0')
+	{
+		Lcd_VidDisplayChracter(Add_pu8String[LOC_u8Iterator]);
+		LOC_u8Iterator++;
+	}
+}
+
+
+void Lcd_VidDisplayNumberXY(uint8 Copy_u8Row,uint8 Copy_u8Column,uint64 Copy_u64Num )
+{
+	Lcd_VidGoToXY(Copy_u8Row,Copy_u8Column);
+	uint64 LOC_u8Inverse=1;
+	if(Copy_u64Num==0)
+	{
+		Lcd_VidDisplayChracter('0');
+	}
+	while(Copy_u64Num != 0)
+	{
+		LOC_u8Inverse=(LOC_u8Inverse*10)+(Copy_u64Num%10);
+		Copy_u64Num /=10;
+	}
+	while(LOC_u8Inverse != 1)
+	{
+		Lcd_VidDisplayChracter(((LOC_u8Inverse%10)+'0'));
+		LOC_u8Inverse /=10;
+	}
+
+}
+void LCD_VidDisplayFloat(float32 Copy_u32Num)
+{
+	uint32 AfterDot=(uint32) (Copy_u32Num *10) %10;
+	uint32 BeforDot=(Copy_u32Num *10)/10;
+	Lcd_VidDisplayNumber(BeforDot);
+	Lcd_VidDisplayChracter('.');
+	Lcd_VidDisplayNumber(AfterDot);
+
+}
+
+
+void Lcd_VidDisplayChracterXY(uint8 Copy_u8Row,uint8 Copy_u8Column,uint8 Copy_u8Command)
+{
+	Lcd_VidGoToXY(Copy_u8Row,Copy_u8Column);
+	Dio_enuWriteChannel(LCD_RS_PIN_NUM,DIO_LOGIC_HIGH);
+		_delay_ms(1);
+		Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+		_delay_ms(1);
+	#if(LCD_DATA_MODE==LCD_FOUR_BIT_MODE)
+		Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,4));
+		Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,5));
+		Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,6));
+		Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,7));
+
+		_delay_ms(1);
+		Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+		_delay_ms(1);
+		Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+		_delay_ms(1);
+
+
+		Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,0));
+		Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,1));
+		Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,2));
+		Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,3));
+
+		_delay_ms(1);
+		Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+		_delay_ms(1);
+	#elif(LCD_DATA_MODE==LCD_EIGHT_BIT_MODE)
+		Dio_enuWriteChannel(LCD_DATA_PIN0,GET_BIT(Copy_u8Command,0));
+		Dio_enuWriteChannel(LCD_DATA_PIN1,GET_BIT(Copy_u8Command,1));
+		Dio_enuWriteChannel(LCD_DATA_PIN2,GET_BIT(Copy_u8Command,2));
+		Dio_enuWriteChannel(LCD_DATA_PIN3,GET_BIT(Copy_u8Command,3));
+		Dio_enuWriteChannel(LCD_DATA_PIN4,GET_BIT(Copy_u8Command,4));
+		Dio_enuWriteChannel(LCD_DATA_PIN5,GET_BIT(Copy_u8Command,5));
+		Dio_enuWriteChannel(LCD_DATA_PIN6,GET_BIT(Copy_u8Command,6));
+		Dio_enuWriteChannel(LCD_DATA_PIN7,GET_BIT(Copy_u8Command,7));
+
+		Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_HIGH);
+		_delay_ms(1);
+		Dio_enuWriteChannel(LCD_E_PIN_NUM,DIO_LOGIC_LOW);
+		_delay_ms(2);
+	#endif
+}
+void LCD_vidClrDisplayXY(uint8 Copy_u8Row,uint8 Copy_u8Column)
+{
+	Lcd_VidGoToXY(Copy_u8Row,Copy_u8Column);
+	Lcd_VidDisplayString((const pu8)" ");
+}
+
+

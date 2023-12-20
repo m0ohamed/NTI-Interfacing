@@ -1,0 +1,29 @@
+#include "../MCAL/Port/Includes/Port.h"
+#include "../MCAL/ADC/Includes/ADC.h"
+#include "../HAL/LCD/Includes/LCD.h"
+
+uint8 Vol[] = {
+  0b00000,
+  0b00000,
+  0b11000,
+  0b01100,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b10000
+};
+
+int main(void)
+{
+	PORT_Init();
+	Lcd_Init();
+	ADC_ConfigType Config={AREF,ADC0,Prescaler_64};
+	ADC_Init(&Config);
+	Lcd_VidCreateCustomCharacter(2,3,Vol,0);
+	while(1)
+	{
+		Lcd_VidCreateCustomCharacter(2,3,Vol,0);
+
+
+	}
+}

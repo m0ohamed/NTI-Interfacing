@@ -1,0 +1,145 @@
+#include "../MCAL/Port/Includes/Port.h"
+#include "../HAL/LCD/Includes/LCD.h"
+#include "util/delay.h"
+uint8 customChar[] = {
+		0b00000,
+		0b00000,
+		0b00000,
+		0b00000,
+		0b00000,
+		0b00000,
+		0b11111,
+		0b11111
+};
+
+uint8 Character[] = {
+		0b00100,
+		0b01110,
+		0b00100,
+		0b01110,
+		0b10101,
+		0b01010,
+		0b11111,
+		0b11111
+};
+uint8 Game_over[] = {
+		0b00000,
+		0b00000,
+		0b00000,
+		0b00000,
+		0b00000,
+		0b10101,
+		0b01010,
+		0b10101
+};
+uint8 DOWn[] = {
+		0b10000,
+		0b01000,
+		0b00100,
+		0b00010,
+		0b00001,
+		0b00000,
+		0b00000,
+		0b00000
+};
+uint8 UP[] = {
+		0b00010,
+		0b00010,
+		0b00010,
+		0b00010,
+		0b00010,
+		0b00010,
+		0b00010,
+		0b00010
+};
+int main(void)
+{
+	uint8 Row,Col;
+	uint8 Iterator=0;
+	PORT_Init();
+	Lcd_Init();
+
+	Lcd_VidCreateCustomCharacter(customChar,0);
+	Lcd_VidCreateCustomCharacter(Character,1);
+	Lcd_VidCreateCustomCharacter(Game_over,2);
+	Lcd_VidCreateCustomCharacter(DOWn,3);
+	Lcd_VidCreateCustomCharacter(UP,4);
+
+	for(Row=0;Row<3;Row++)
+	{
+		for(Col=0;Col<20;Col++)
+		{
+			if(Row==1)
+				continue;
+			Lcd_VidGoToXY(Row,Col);
+			Lcd_VidDisplayChracter(0);
+
+		}
+	}
+	for(Col=0;Col<20;Col++)
+	{
+
+		Lcd_VidGoToXY(3,Col);
+		Lcd_VidDisplayChracter(2);
+
+	}
+	while(1)
+	{
+		Iterator++;
+		if(Iterator==2)
+		{
+			LCD_vidClrDisplayXY(0,15);
+			Lcd_VidDisplayChracterXY(1,15,3);
+		}
+		else if(Iterator==3)
+		{
+			LCD_vidClrDisplayXY(2,13);
+			Lcd_VidDisplayChracterXY(2,13,4);
+		}
+		else if(Iterator==4)
+				{
+					LCD_vidClrDisplayXY(3,18);
+					Lcd_VidDisplayChracterXY(3,18,3);
+				}
+		for(Row=0;Row<3;Row++)
+		{
+			for(Col=0;Col<20;Col++)
+			{
+				if(Row==1)
+					continue;
+
+				if(Row==0 && Col==15 && Iterator==2)
+				{
+					Row=2;
+					Col=16;
+					LCD_vidClrDisplayXY(1,15);
+					Lcd_VidDisplayChracterXY(0,15,0);
+					continue;
+				}
+				else if(Row==2 && Col==13 && Iterator==3)
+				{
+					Row=0;
+					Col=14;
+					LCD_vidClrDisplayXY(2,13);
+					Lcd_VidDisplayChracterXY(2,13,0);
+					continue;
+				}
+				else if(Row==2 && Col==18 && Iterator==4)
+				{
+					Row=0;
+					Col=14;
+					LCD_vidClrDisplayXY(2,13);
+					Lcd_VidDisplayChracterXY(2,13,0);
+					continue;
+				}
+				Lcd_VidDisplayChracterXY(Row,Col,1);
+				_delay_ms(1000);
+				Lcd_VidDisplayChracterXY(Row,Col,0);
+
+			}
+		}
+
+	}
+
+}
+

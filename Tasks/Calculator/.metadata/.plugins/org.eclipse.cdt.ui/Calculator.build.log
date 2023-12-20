@@ -1,0 +1,36 @@
+12:49:39 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27376 bytes (83.5% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+12:49:40 Build Finished. 0 errors, 1 warnings. (took 777ms)
+

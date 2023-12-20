@@ -1,0 +1,38 @@
+10:20:26 **** Incremental Build of configuration Debug for project ADC ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC.map -mmcu=atmega32 -o "ADC.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC.elf  >"ADC.lss"
+Finished building: ADC.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC.elf  "ADC.hex"
+Finished building: ADC.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   28836 bytes (88.0% Full)
+(.text + .data + .bootloader)
+
+Data:        350 bytes (17.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+10:20:41 Build Finished. 0 errors, 0 warnings. (took 14s.364ms)
+

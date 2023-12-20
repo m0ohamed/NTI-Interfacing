@@ -1,0 +1,57 @@
+#include "../MCAL/Port/Includes/Port.h"
+#include "../MCAL/ADC/Includes/ADC.h"
+#include "../HAL/LCD/Includes/LCD.h"
+
+uint8 Vol[] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b00000,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b11111
+};
+uint8 Vol1[] = {
+  0b00000,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b11111,
+  0b11111
+};
+uint8 customChar[] = {
+  0b00000,
+  0b00000,
+  0b00000,
+  0b11111,
+  0b01010,
+  0b10110,
+  0b11111,
+  0b11111
+};
+uint16 ADC_VAL=0;
+void ADC_CallFunc(uint16 Val)
+{
+	ADC_VAL=Val;
+}
+int main(void)
+{
+	PORT_Init();
+	Lcd_Init();
+	ADC_ConfigType Config={AREF,ADC0,Prescaler_64};
+	ADC_Init(&Config);
+	ADC_CallBack(ADC_CallFunc);
+	LCD_DisplayStringXY(0,1,"Volume = ");
+	while(1)
+	{
+		Lcd_VidCreateCustomCharacter(2,3,customChar,0);
+		Lcd_VidCreateCustomCharacter(2,4,customChar,7);
+		Lcd_VidCreateCustomCharacter(1,4,customChar,0);
+		Lcd_VidCreateCustomCharacter(2,5,customChar,0);
+		Lcd_VidDisplayChracter(0);
+
+	}
+}

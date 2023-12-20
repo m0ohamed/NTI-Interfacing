@@ -1,0 +1,70 @@
+#ifndef TIME_H
+#define TIME_H
+
+#include "../../../Services/Lib/std_types.h"
+
+#define ENABLE_INTERRUPT          1
+#define DISABLE_INTERRUPT            0
+
+
+
+typedef enum
+{
+	Normal,
+	CTC,
+	Phase_Correct,
+	PWM
+}Timer0_Mode;
+
+typedef enum
+{
+	NO_clock,
+	No_prescaler,
+	prescaler_8,
+	prescaler_64,
+	prescaler_256,
+	prescaler_1024,
+
+}Timer_Prescaler;
+
+typedef enum
+{
+	Disconnect,
+	Toggle,
+	Clear,
+	set
+}Timer_OC;
+
+
+
+typedef enum
+{
+	Timer0,
+	Timer1,
+	Timer2
+}Timer_Type;
+
+
+typedef struct
+{
+	uint16 preload;
+	uint16 Compare_value;
+	Timer_Type Timer;
+	Timer0_Mode Mode;
+	Timer_OC  OC;
+}Timer_Config;
+typedef enum
+{
+	enu_OK,
+	Error_NullPtr
+}ErrorStatus;
+ErrorStatus Timer_enuTimer_Init(const Timer_Config* ConfigPtr);
+void Timer_Start(void);
+void Timer_DeInit(Timer_Type Timer);
+void ICU_CalculateDuty(void);
+
+void Timer0_CallBack(void (*GPT0_Ptr)(void));
+void Timer1_CallBack(void (*GPT1_Ptr)(void));
+void Timer2_CallBack(void (*GPT1_Ptr)(void));
+
+#endif

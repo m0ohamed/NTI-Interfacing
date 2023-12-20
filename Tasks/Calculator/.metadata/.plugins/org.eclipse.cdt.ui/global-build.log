@@ -1,0 +1,836 @@
+11:47:28 **** Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../MCAL/Port/Srcs/Port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/Port/Srcs/Port.d" -MT"MCAL/Port/Srcs/Port.o" -c -o "MCAL/Port/Srcs/Port.o" "../MCAL/Port/Srcs/Port.c"
+Finished building: ../MCAL/Port/Srcs/Port.c
+ 
+Building file: ../MCAL/Dio/Srcs/Dio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"MCAL/Dio/Srcs/Dio.d" -MT"MCAL/Dio/Srcs/Dio.o" -c -o "MCAL/Dio/Srcs/Dio.o" "../MCAL/Dio/Srcs/Dio.c"
+Finished building: ../MCAL/Dio/Srcs/Dio.c
+ 
+Building file: ../HAL/LCD/Srcs/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/LCD/Srcs/LCD.d" -MT"HAL/LCD/Srcs/LCD.o" -c -o "HAL/LCD/Srcs/LCD.o" "../HAL/LCD/Srcs/LCD.c"
+In file included from ../HAL/LCD/Srcs/LCD.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/LCD/Srcs/LCD.c
+ 
+Building file: ../HAL/KeyPad/Srcs/Keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/KeyPad/Srcs/Keypad.d" -MT"HAL/KeyPad/Srcs/Keypad.o" -c -o "HAL/KeyPad/Srcs/Keypad.o" "../HAL/KeyPad/Srcs/Keypad.c"
+In file included from ../HAL/KeyPad/Srcs/Keypad.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/KeyPad/Srcs/Keypad.c
+ 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   33074 bytes (100.9% Full)
+(.text + .data + .bootloader)
+
+Data:        357 bytes (17.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:48:09 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../App/Main.c: In function 'Key_Checker':
+../App/Main.c:73: error: 'flag3' undeclared (first use in this function)
+../App/Main.c:73: error: (Each undeclared identifier is reported only once
+../App/Main.c:73: error: for each function it appears in.)
+../App/Main.c:73: error: 'POS1' undeclared (first use in this function)
+../App/Main.c:73: error: 'POS2' undeclared (first use in this function)
+../App/Main.c:75: error: 'operators' undeclared (first use in this function)
+../App/Main.c:78: error: 'sign1' undeclared (first use in this function)
+../App/Main.c:78: error: 'sign2' undeclared (first use in this function)
+../App/Main.c:81: error: 'Result1' undeclared (first use in this function)
+../App/Main.c:81: error: 'Operand1' undeclared (first use in this function)
+../App/Main.c:81: error: 'Operand2' undeclared (first use in this function)
+../App/Main.c: In function 'number_key':
+../App/Main.c:216: error: 'flag1' undeclared (first use in this function)
+../App/Main.c:218: error: 'Operand1' undeclared (first use in this function)
+../App/Main.c:219: error: 'POS1' undeclared (first use in this function)
+../App/Main.c:221: error: 'flag2' undeclared (first use in this function)
+../App/Main.c:223: error: 'Operand2' undeclared (first use in this function)
+../App/Main.c:224: error: 'POS2' undeclared (first use in this function)
+../App/Main.c:226: error: 'flag3' undeclared (first use in this function)
+../App/Main.c:228: error: 'Operand3' undeclared (first use in this function)
+../App/Main.c:229: error: 'POS3' undeclared (first use in this function)
+../App/Main.c: In function 'Operat_key':
+../App/Main.c:235: error: 'flag1' undeclared (first use in this function)
+../App/Main.c:235: error: 'POS1' undeclared (first use in this function)
+../App/Main.c:239: error: 'flag2' undeclared (first use in this function)
+../App/Main.c:240: error: 'per1' undeclared (first use in this function)
+../App/Main.c:241: error: 'operators' undeclared (first use in this function)
+../App/Main.c:244: error: 'POS2' undeclared (first use in this function)
+../App/Main.c:248: error: 'flag3' undeclared (first use in this function)
+../App/Main.c:249: error: 'per2' undeclared (first use in this function)
+../App/Main.c: In function 'sign_key':
+../App/Main.c:261: error: 'flag1' undeclared (first use in this function)
+../App/Main.c:261: error: 'POS1' undeclared (first use in this function)
+../App/Main.c:264: error: 'sign1' undeclared (first use in this function)
+../App/Main.c:266: error: 'flag2' undeclared (first use in this function)
+../App/Main.c:266: error: 'POS2' undeclared (first use in this function)
+../App/Main.c:269: error: 'sign2' undeclared (first use in this function)
+../App/Main.c:271: error: 'flag3' undeclared (first use in this function)
+../App/Main.c:271: error: 'POS3' undeclared (first use in this function)
+../App/Main.c:274: error: 'sign3' undeclared (first use in this function)
+../App/Main.c:282: error: 'per1' undeclared (first use in this function)
+../App/Main.c:283: error: 'operators' undeclared (first use in this function)
+../App/Main.c:290: error: 'per2' undeclared (first use in this function)
+make: *** [App/Main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+11:48:29 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   33074 bytes (100.9% Full)
+(.text + .data + .bootloader)
+
+Data:        357 bytes (17.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:49:03 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   32324 bytes (98.6% Full)
+(.text + .data + .bootloader)
+
+Data:        333 bytes (16.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:49:50 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   32292 bytes (98.5% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:49:58 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   32292 bytes (98.5% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:00:31 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   32938 bytes (100.5% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:02:33 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../HAL/LCD/Srcs/LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HAL/LCD/Srcs/LCD.d" -MT"HAL/LCD/Srcs/LCD.o" -c -o "HAL/LCD/Srcs/LCD.o" "../HAL/LCD/Srcs/LCD.c"
+In file included from ../HAL/LCD/Srcs/LCD.c:3:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../HAL/LCD/Srcs/LCD.c
+ 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../App/Main.c: In function 'main':
+../App/Main.c:24: warning: implicit declaration of function 'LCD_DisplayString'
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+./App/Main.o: In function `main':
+../App/Main.c:24: undefined reference to `LCD_DisplayString'
+make: *** [Calculator.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:02:54 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../App/Main.c: In function 'main':
+../App/Main.c:24: warning: pointer targets in passing argument 1 of 'Lcd_VidDisplayString' differ in signedness
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27934 bytes (85.2% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:03:46 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27934 bytes (85.2% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:04:37 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27934 bytes (85.2% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:07:43 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../App/Main.c: In function 'Key_Checker':
+../App/Main.c:67: warning: implicit declaration of function 'func_2Operand'
+../App/Main.c: At top level:
+../App/Main.c:161: warning: conflicting types for 'func_2Operand'
+../App/Main.c:67: warning: previous implicit declaration of 'func_2Operand' was here
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27968 bytes (85.4% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:08:08 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27976 bytes (85.4% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:09:53 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27976 bytes (85.4% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:19:08 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27408 bytes (83.6% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:20:19 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27408 bytes (83.6% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:37:58 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27170 bytes (82.9% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:38:47 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27170 bytes (82.9% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:41:31 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27260 bytes (83.2% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:43:01 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27264 bytes (83.2% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:44:05 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27266 bytes (83.2% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:44:11 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27266 bytes (83.2% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:45:43 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27268 bytes (83.2% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:48:25 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27370 bytes (83.5% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:49:39 **** Incremental Build of configuration Debug for project Calculator ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:5:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Calculator.map -mmcu=atmega32 -o "Calculator.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./App/Main.o   
+Finished building target: Calculator.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Calculator.elf  "Calculator.hex"
+Finished building: Calculator.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Calculator.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   27376 bytes (83.5% Full)
+(.text + .data + .bootloader)
+
+Data:        312 bytes (15.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

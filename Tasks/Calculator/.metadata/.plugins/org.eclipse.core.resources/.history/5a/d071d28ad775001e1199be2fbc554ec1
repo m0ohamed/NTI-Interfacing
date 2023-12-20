@@ -1,0 +1,24 @@
+#ifndef KEYPAD_PRV_H
+#define KEYPAD_PRV_H
+
+#include "Keypad_Cfg.h"
+
+ void Keypad_VidWritePins(uint8 LOC_u8Pattern);
+ void Keypad_VidReadPins(pu8 Add_LOC_u8PinsReading);
+
+#if(KEYPAD_TYPE==KEYPAD_4x4)
+ uint8 Symbols[16]=
+        {'7','8','9','/',
+		'4','5','6','x',
+		'1','2','3','-',
+		'#','0','=','+'};
+#elif(KEYPAD_TYPE==KEYPAD_4x3)
+static uint8 Symbols[12]=
+        {'7','8','9',
+		'4','5','6',
+		'1','2','3',
+		'#','0','='};
+
+#endif
+
+#endif

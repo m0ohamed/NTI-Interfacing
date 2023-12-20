@@ -1,0 +1,1655 @@
+07:24:10 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30338 bytes (92.6% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:24:55 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30338 bytes (92.6% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:26:38 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30342 bytes (92.6% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+07:27:56 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30338 bytes (92.6% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:53:26 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30338 bytes (92.6% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+09:55:50 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30338 bytes (92.6% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:54:32 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30400 bytes (92.8% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:56:14 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30400 bytes (92.8% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+10:57:55 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30400 bytes (92.8% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:00:12 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30414 bytes (92.8% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:18:44 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30414 bytes (92.8% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:25:28 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30444 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:39:13 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30446 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        316 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:40:31 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30698 bytes (93.7% Full)
+(.text + .data + .bootloader)
+
+Data:        316 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:54:46 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30434 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        309 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:55:13 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30454 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        309 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:55:37 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30460 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        309 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:58:09 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30460 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        309 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:02:18 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30454 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        309 bytes (15.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:03:12 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30458 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:09:17 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30458 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:15:07 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30482 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:15:47 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30482 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:16:20 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30482 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:20:50 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30482 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:21:55 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30682 bytes (93.6% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:22:40 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30682 bytes (93.6% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:25:43 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30682 bytes (93.6% Full)
+(.text + .data + .bootloader)
+
+Data:        313 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:06:26 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30406 bytes (92.8% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:07:32 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30448 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:07:59 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30024 bytes (91.6% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:08:32 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30448 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:08:54 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30448 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:09:45 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30024 bytes (91.6% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:10:10 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30024 bytes (91.6% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:10:35 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   29990 bytes (91.5% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:11:33 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30024 bytes (91.6% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:13:46 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30062 bytes (91.7% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:16:44 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30076 bytes (91.8% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:16:52 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30062 bytes (91.7% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:17:39 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30062 bytes (91.7% Full)
+(.text + .data + .bootloader)
+
+Data:        325 bytes (15.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:20:06 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30100 bytes (91.9% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:20:33 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30100 bytes (91.9% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:21:18 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30490 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:21:58 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30490 bytes (93.0% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:26:34 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30508 bytes (93.1% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+14:27:02 **** Incremental Build of configuration Debug for project ADC_EXTI ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:6:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: ADC_EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ADC_EXTI.map -mmcu=atmega32 -o "ADC_EXTI.elf"  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/EXTI/Srcs/EXTI.o ./MCAL/EXTI/Srcs/EXTI_IRQs.o  ./MCAL/Dio/Srcs/Dio.o  ./MCAL/ADC/Srcs/ADC.o ./MCAL/ADC/Srcs/ADC_IRQ.o  ./HAL/LCD/Srcs/LCD.o  ./App/Main.o   
+Finished building target: ADC_EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ADC_EXTI.elf  >"ADC_EXTI.lss"
+Finished building: ADC_EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex ADC_EXTI.elf  "ADC_EXTI.hex"
+Finished building: ADC_EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 ADC_EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30508 bytes (93.1% Full)
+(.text + .data + .bootloader)
+
+Data:        327 bytes (16.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

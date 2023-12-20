@@ -1,0 +1,6 @@
+#ifndef BUZZER_CFG_H
+#define BUZZER_CFG_H
+
+#define Buzzer_PIN      PIN26
+
+#endif

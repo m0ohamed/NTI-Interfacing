@@ -1,0 +1,46 @@
+#ifndef KEYPAD_Cfg_H
+#define KEYPAD_Cfg_H
+
+
+#define KEYPAD_4x3       0
+#define KEYPAD_4x4       1
+
+#define KEYPAD_TYPE       KEYPAD_4x4
+
+
+#if(KEYPAD_TYPE==KEYPAD_4x3)
+#define KEYPAD_NUMBER_OF_ROWS    4
+#define KEYPAD_NUMBER_OF_COL     3
+
+#define KEYPAD_ROW1    PIN7
+#define KEYPAD_ROW2    PIN7
+#define KEYPAD_ROW3    PIN7
+#define KEYPAD_ROW4    PIN7
+
+#define KEYPAD_COL1    PIN7
+#define KEYPAD_COL2    PIN7
+#define KEYPAD_COL3    PIN7
+
+#elif(KEYPAD_TYPE==KEYPAD_4x4)
+#define KEYPAD_NUMBER_OF_ROWS    4
+#define KEYPAD_NUMBER_OF_COL     4
+
+#define KEYPAD_ROW1    PIN8
+#define KEYPAD_ROW2    PIN9
+#define KEYPAD_ROW3    PIN10
+#define KEYPAD_ROW4    PIN11
+
+#define KEYPAD_COL1    PIN12
+#define KEYPAD_COL2    PIN13
+#define KEYPAD_COL3    PIN14
+#define KEYPAD_COL4    PIN15
+
+#endif
+
+
+
+
+
+
+
+#endif

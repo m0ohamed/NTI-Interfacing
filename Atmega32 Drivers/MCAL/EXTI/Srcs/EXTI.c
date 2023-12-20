@@ -1,0 +1,192 @@
+#include "../Includes/EXTI.h"
+
+#include "../Includes/EXTI_Cfg.h"
+#include "../Includes/EXTI_Prv.h"
+#include "../../../Services/Lib/common_macros.h"
+#include "../../../Services/Lib/std_types.h"
+
+
+EXTI_tenuErrorStatus EXTI_CallBack(void(*Func_Ptr)(void),uint8 Copy_u8Index)
+{
+	uint8 ErrorStatus=EXTI_enuOK;
+	if(Func_Ptr==Null_ptr)
+	{
+		ErrorStatus=EXTI_NullPtr;
+	}
+	else{
+	EXTIINT_Ptr[Copy_u8Index]=Func_Ptr;
+        }
+	return ErrorStatus;
+}
+
+
+
+
+void EXTI_Init(void)
+{
+#if(EXTI_INT0_MODE==EXTI_INT0_DISABLE)
+	CLEAR_BIT(GICR,EXTI_INT0);
+#elif(EXTI_INT0_MODE==EXTI_INT0_ENABLE_WITH_LOW_MODE)
+	MCUCR &=EXTI_INT0_ENABLE_WITH_LOW_MODE;
+	SET_BIT(GICR,EXTI_INT0);
+#elif(EXTI_INT0_MODE==EXTI_INT0_ENABLE_WITH_LOGICAL_CHANGE)
+	MCUCR =(MCUCR & 0xFC) |EXTI_INT0_ENABLE_WITH_LOGICAL_CHANGE;
+	SET_BIT(GICR,EXTI_INT0);
+#elif(EXTI_INT0_MODE==EXTI_INT0_ENABLE_WITH_FALLING_EDGE)
+	MCUCR =(MCUCR & 0xFC) |EXTI_INT0_ENABLE_WITH_FALLING_EDGE;
+	SET_BIT(GICR,EXTI_INT0);
+#elif(EXTI_INT0_MODE==EXTI_INT0_ENABLE_WITH_RAISING_EDGE)
+	MCUCR =(MCUCR & 0xFC) |EXTI_INT0_ENABLE_WITH_RAISING_EDGE;
+	SET_BIT(GICR,EXTI_INT0);
+#endif
+
+
+#if(EXTI_INT1_MODE==EXTI_INT1_DISABLE)
+	CLEAR_BIT(GICR,EXTI_INT1);
+
+
+#elif(EXTI_INT1_MODE==EXTI_INT1_ENABLE_WITH_LOW_MODE)
+	MCUCR &=EXTI_INT1_ENABLE_WITH_LOW_MODE;
+	SET_BIT(GICR,EXTI_INT1);
+
+
+#elif(EXTI_INT1_MODE==EXTI_INT1_ENABLE_WITH_LOGICAL_CHANGE)
+	MCUCR =(MCUCR & 0xF3) |(EXTI_INT1_ENABLE_WITH_LOGICAL_CHANGE<<2);
+	SET_BIT(GICR,EXTI_INT1);
+
+
+#elif(EXTI_INT1_MODE==EXTI_INT1_ENABLE_WITH_FALLING_EDGE)
+	MCUCR =(MCUCR & 0xF3) | (EXTI_INT1_ENABLE_WITH_FALLING_EDGE<<2);
+	SET_BIT(GICR,EXTI_INT1);
+
+
+#elif(EXTI_INT1_MODE==EXTI_INT1_ENABLE_WITH_RAISING_EDGE)
+	MCUCR =(MCUCR & 0xF3) | (EXTI_INT1_ENABLE_WITH_RAISING_EDGE<<2);
+	SET_BIT(GICR,EXTI_INT1);
+#endif
+
+
+#if(EXTI_INT2_MODE==EXTI_INT2_DISABLE)
+	CLEAR_BIT(GICR,EXTI_INT2);
+
+
+#elif(EXTI_INT2_MODE==EXTI_INT2_ENABLE_WITH_FALLING_EDGE)
+	MCUCSR &=	EXTI_INT2_ENABLE_WITH_FALLING_EDGE;
+	SET_BIT(GICR,EXTI_INT2);
+
+
+#elif(EXTI_INT2_MODE==EXTI_INT2_ENABLE_WITH_RAISING_EDGE)
+	MCUCSR |=EXTI_INT2_ENABLE_WITH_RAISING_EDGE;
+	SET_BIT(GICR,EXTI_INT2);
+#endif
+
+
+
+
+}
+
+
+EXTI_tenuErrorStatus EXTI_Disable(uint8 Copy_u8INTNum)
+{
+	uint8 ErrorStatus=EXTI_enuOK;
+
+	switch(Copy_u8INTNum)
+	{
+	case EXTI_INT0:
+		CLEAR_BIT(GICR,EXTI_INT0);
+		break;
+	case EXTI_INT1:
+		CLEAR_BIT(GICR,EXTI_INT1);
+		break;
+	case EXTI_INT2:
+		CLEAR_BIT(GICR,EXTI_INT2);
+		break;
+	default:
+		ErrorStatus=EXTI_enuWrongINT;
+		break;
+	}
+	return ErrorStatus;
+}
+
+EXTI_tenuErrorStatus EXTI_Enable(uint8 Copy_u8INTNum,uint8 Copy_u8INTMode)
+{
+	uint8 ErrorStatus=EXTI_enuOK;
+
+
+	switch(Copy_u8INTNum)
+	{
+	case EXTI_INT0:
+		switch(Copy_u8INTMode)
+		{
+		case EXTI_INT0_ENABLE_WITH_LOW_MODE:
+			MCUCR &=EXTI_INT0_ENABLE_WITH_LOW_MODE;
+			SET_BIT(GICR,EXTI_INT0);
+			break;
+		case EXTI_INT0_ENABLE_WITH_LOGICAL_CHANGE:
+			MCUCR =(MCUCR & 0xFC) |EXTI_INT0_ENABLE_WITH_LOGICAL_CHANGE;
+			SET_BIT(GICR,EXTI_INT0);
+			break;
+		case EXTI_INT0_ENABLE_WITH_FALLING_EDGE:
+			MCUCR =(MCUCR & 0xFC) |EXTI_INT0_ENABLE_WITH_FALLING_EDGE;
+			SET_BIT(GICR,EXTI_INT0);
+			break;
+		case EXTI_INT0_ENABLE_WITH_RAISING_EDGE:
+			MCUCR =(MCUCR & 0xFC) |EXTI_INT0_ENABLE_WITH_RAISING_EDGE;
+			SET_BIT(GICR,EXTI_INT0);
+			break;
+		default:
+			ErrorStatus=EXTI_enuWrongMode;
+			break;
+		}
+
+		break;
+		case EXTI_INT1:
+			switch(Copy_u8INTMode)
+			{
+			case EXTI_INT1_ENABLE_WITH_LOW_MODE:
+				MCUCR &=EXTI_INT1_ENABLE_WITH_LOW_MODE;
+				SET_BIT(GICR,EXTI_INT1);
+
+				break;
+			case EXTI_INT1_ENABLE_WITH_LOGICAL_CHANGE:
+				MCUCR =(MCUCR & 0xF3) |(EXTI_INT1_ENABLE_WITH_LOGICAL_CHANGE<<2);
+				SET_BIT(GICR,EXTI_INT1);
+				break;
+			case EXTI_INT1_ENABLE_WITH_FALLING_EDGE:
+				MCUCR =(MCUCR & 0xF3) | (EXTI_INT1_ENABLE_WITH_FALLING_EDGE<<2);
+				SET_BIT(GICR,EXTI_INT1);
+				break;
+			case EXTI_INT1_ENABLE_WITH_RAISING_EDGE:
+				MCUCR =(MCUCR & 0xF3) | (EXTI_INT1_ENABLE_WITH_RAISING_EDGE<<2);
+				SET_BIT(GICR,EXTI_INT1);
+				break;
+			default:
+				ErrorStatus=EXTI_enuWrongMode;
+				break;
+			}
+
+			break;
+			case EXTI_INT2:
+				switch(Copy_u8INTMode)
+				{
+
+				case EXTI_INT2_ENABLE_WITH_FALLING_EDGE:
+					MCUCSR &=	EXTI_INT2_ENABLE_WITH_FALLING_EDGE;
+					SET_BIT(GICR,EXTI_INT2);
+					break;
+				case EXTI_INT2_ENABLE_WITH_RAISING_EDGE:
+					MCUCSR |=EXTI_INT2_ENABLE_WITH_RAISING_EDGE;
+					SET_BIT(GICR,EXTI_INT2);
+					break;
+				default:
+					ErrorStatus=EXTI_enuWrongMode;
+					break;
+				}
+				break;
+				default:
+					ErrorStatus=EXTI_enuWrongINT;
+					break;
+	}
+
+	return ErrorStatus;
+}

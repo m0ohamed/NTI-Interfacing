@@ -1,0 +1,40 @@
+18:36:52 **** Incremental Build of configuration Debug for project Timer_Task ****
+make all 
+Building file: ../App/Main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"App/Main.d" -MT"App/Main.o" -c -o "App/Main.o" "../App/Main.c"
+In file included from ../App/Main.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../App/Main.c
+ 
+Building target: Timer_Task.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Timer_Task.map -mmcu=atmega32 -o "Timer_Task.elf"  ./MCAL/Timers/Srcs/Timer.o ./MCAL/Timers/Srcs/Timer_IRQ.o  ./MCAL/Port/Srcs/Port.o  ./MCAL/GIE/Srcs/GIE.o  ./MCAL/Dio/Srcs/Dio.o  ./HAL/LCD/Srcs/LCD.o  ./HAL/KeyPad/Srcs/Keypad.o  ./HAL/Buzzer/Srcs/Buzzer.o  ./App/Main.o   
+Finished building target: Timer_Task.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Timer_Task.elf  >"Timer_Task.lss"
+Finished building: Timer_Task.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Timer_Task.elf  "Timer_Task.hex"
+Finished building: Timer_Task.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Timer_Task.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   30448 bytes (92.9% Full)
+(.text + .data + .bootloader)
+
+Data:        421 bytes (20.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:36:53 Build Finished. 0 errors, 1 warnings. (took 1s.174ms)
+

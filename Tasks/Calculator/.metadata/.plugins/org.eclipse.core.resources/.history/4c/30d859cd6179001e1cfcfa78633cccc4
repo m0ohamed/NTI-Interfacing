@@ -1,0 +1,227 @@
+#include "../MCAL/Port/Includes/Port.h"
+#include "../MCAL/Dio/Includes/Dio.h"
+#include "../HAL/LCD/Includes/LCD.h"
+#include "../HAL/KeyPad/Includes/Keypad.h"
+#include "util/delay.h"
+uint8 operators[1];
+uint8 per1=0,per2=0;
+uint8 POS1=0,POS2=0,POS3=0;
+uint8 flag1=1,flag2=0,flag3=0;
+uint8 sign1=0,sign2=0,sign3=0;
+sint32 Operand1=0,Operand2=0,Operand3=0;
+float32 Result1=0.0,Result2=0.0;
+
+uint8 Key_Checker(uint8 key);
+void number_key(uint32 key);
+void Operat_key(uint32 key);
+void sign_key(uint32 key);
+
+int main(void)
+{
+	PORT_Init();
+	Lcd_Init();
+	uint8 Key=0;
+	LCD_DisplayStringXY(0,0,"Welcome    ");
+	_delay_ms(500);
+	LCD_vidClrDisplay();
+	LCD_DisplayStringXY(0,0,"Calc.");
+	_delay_ms(100);
+	LCD_DisplayStringXY(0,0,"Calc..");
+	_delay_ms(100);
+	LCD_DisplayStringXY(0,0,"Calc...");
+	_delay_ms(100);
+	LCD_DisplayStringXY(0,0,"Calc....");
+	Lcd_VidGoToXY(1,0);
+	LCD_vidClrDisplay();
+	while(1)
+	{
+		Keypad_enuKeypadGetPressed(&Key);
+		if(Key !=0)
+		{
+			Key_Checker(Key);
+
+		}
+
+	}
+}
+
+uint8 Key_Checker(uint8 key)
+{
+	uint8 ret=0;
+
+
+	if(key>='0' && key<='9')
+	{
+		number_key(key);
+	}
+
+
+
+	else if(key=='*' || key=='/')
+	{
+		Operat_key(key);
+	}
+
+	else if(key=='+' || key=='-')
+	{
+		sign_key(key);
+
+	}
+
+	if(key=='=')
+	{
+		if(key== '=' && flag3 !=1 && POS1 !=0 && POS2 !=0)
+		{
+			switch(operators[0])
+			{
+			case '+':
+				if(sign1==0 && sign2==0)
+				{
+					Lcd_VidDisplayChracter(key);
+					Result1=Operand1+Operand2;
+					Lcd_VidDisplayNumber(Result1);
+				}
+				else if(sign1==1 && sign2==0)
+				{
+					Lcd_VidDisplayChracter(key);
+
+					if(Operand1>Operand2)
+					{
+						Result1=Operand1-Operand2;
+						Lcd_VidDisplayChracter('-');
+					}
+					else if(Operand1<Operand2)
+					{
+						Result1=Operand2-Operand1;
+					}
+					Lcd_VidDisplayNumber(Result1);
+				}
+				else if(sign1==0 && sign2==1)
+				{
+					Lcd_VidDisplayChracter(key);
+
+					if(Operand1<Operand2)
+					{
+						Lcd_VidDisplayChracter('-');
+						Result1=Operand2-Operand1;
+					}
+					else if(Operand1>Operand2)
+					{
+						Result1=Operand1-Operand2;
+					}
+
+					Lcd_VidDisplayNumber(Result1);
+				}
+				else if(sign1==1 && sign2==1)
+				{
+					Lcd_VidDisplayChracter(key);
+
+
+						Lcd_VidDisplayChracter('-');
+						Result1=Operand1+Operand2;
+
+					Lcd_VidDisplayNumber(Result1);
+				}
+
+
+				break;
+			case'-':
+				break;
+			case '*':
+				break;
+			case'/':
+				break;
+
+			}
+		}
+	}
+	return ret;
+}
+
+
+void number_key(uint32 key)
+{
+	Lcd_VidDisplayChracter(key);
+	key=key - '0';
+	if(flag1==1)
+	{
+		Operand1=(Operand1 * 10)+key;
+		POS1++;
+	}
+	else if(flag2==1)
+	{
+		Operand2=(Operand2 *10)+key;
+		POS2++;
+	}
+	else if(flag3==1)
+	{
+		Operand3=(Operand3 *10)+key;
+		POS3++;
+	}
+}
+
+void Operat_key(uint32 key)
+{
+	if(flag1==1 && POS1 !=0)
+	{
+		Lcd_VidDisplayChracter(key);
+		flag1=0;
+		flag2=1;
+		per1=1;
+		operators[0]=key;
+
+	}
+	else if(flag2==1 && POS2 !=0)
+	{
+		Lcd_VidDisplayChracter(key);
+		flag2=0;
+		flag3=1;
+		per2=1;
+		operators[1]=key;
+
+	}
+	else if(flag3==1)
+	{
+
+	}
+}
+
+void sign_key(uint32 key)
+{
+	if(flag1==1 && POS1==0)
+	{
+		Lcd_VidDisplayChracter(key);
+		sign1=1;
+	}
+	else if(flag2==1 && POS2==0)
+	{
+		Lcd_VidDisplayChracter(key);
+		sign2=1;
+	}
+	else if(flag3==1 && POS3==0)
+	{
+		Lcd_VidDisplayChracter(key);
+		sign3=1;
+	}
+
+	if(flag1==1 && POS1 !=0)
+	{
+		Lcd_VidDisplayChracter(key);
+		flag1=0;
+		flag2=1;
+		per1=0;
+		operators[0]=key;
+	}
+	else if(flag2==1 && POS2 !=0)
+	{
+		Lcd_VidDisplayChracter(key);
+		flag2=0;
+		flag3=1;
+		per2=0;
+		operators[1]=key;
+	}
+	else if(flag3==1 && POS3 !=0)
+	{
+
+	}
+}
